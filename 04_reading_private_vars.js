@@ -20,6 +20,7 @@ async function read(blockTag) {
     1,
     blockTag
   )
+  console.log(encodedBaseSupplyIndex)
   // baseSupplyIndex:uint64 has 8 bytes and offset from right to left 0 bytes
   // since it's the first variable of slot 0
   let baseSupplyIndex = getStorageVariable(encodedBaseSupplyIndex, 8, 0)

@@ -18,7 +18,7 @@ async function read(blockTag) {
   const logs = await rpcProvider.getLogs({
     address: contractAddress,
     topics: [
-      ethers.utils.id('Transfer(address,address,uint256)'),
+      ethers.utils.id('Transfer(address,address,uint256)')
     ],
     fromBlock: blockTag,
     toBlock: blockTag,

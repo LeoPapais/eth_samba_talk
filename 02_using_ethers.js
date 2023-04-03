@@ -15,7 +15,7 @@ async function read() {
   
   const balanceOf = await contract.balanceOf(walletAddress)
 
-  console.log(balanceOf)
+  console.log(balanceOf.toString())
 }
 
 read()

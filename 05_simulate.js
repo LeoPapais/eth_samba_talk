@@ -33,7 +33,7 @@ const mintDai = async () => {
         state_objects: {
           '0x6b175474e89094c44da98b954eedeac495271d0f': {
             storage: {
-              '0xedd7d04419e9c48ceb6055956cbb4e2091ae310313a4d1fa7cbcfe7561616e03':
+              [overrideStorageLocation]:
                 '0x0000000000000000000000000000000000000000000000000000000000000001',
             },
           },
@@ -48,9 +48,8 @@ const mintDai = async () => {
   ).data;
 
   console.timeEnd('Simulation');
-  console.log(JSON.stringify(mint.transaction.transaction_info.logs, null, 2));
+  console.log(JSON.stringify(mint, null, 2));
   // TODO: extract token transferred
 };
-
 
 mintDai()
